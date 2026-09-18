@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://ba5lkxnclhnh8"]
+
+[ext_resource type="Script" uid="uid://cm5hhn0sc5jwh" path="res://scripts/instructions.gd" id="1_dkfqi"]
+
+[sub_resource type="Animation" id="Animation_nisbi"]
+resource_name = "instruction_animation"
+length = 4.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_njqp3"]
+_data = {
+&"instruction_animation": SubResource("Animation_nisbi")
+}
+
+[node name="Instructions" type="Control" unique_id=1035633819]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dkfqi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1686941877]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.75
+offset_top = -38.5
+offset_right = 168.75
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.28235295)
+
+[node name="Label" type="Label" parent="." unique_id=665068750]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -24.5
+offset_right = 165.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Click to defend earth"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1425315839]
+libraries/ = SubResource("AnimationLibrary_njqp3")
+autoplay = &"instruction_animation"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

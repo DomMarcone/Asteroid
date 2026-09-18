@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://xg83c3dwv6v5"]
+
+[ext_resource type="Script" uid="uid://b1u462sjsec66" path="res://scripts/earth.gd" id="1_2umt7"]
+[ext_resource type="PackedScene" uid="uid://c5yub7kctskgp" path="res://assets/earth.glb" id="1_afhwv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cfqcv"]
+radius = 2.0
+
+[node name="Earth" type="Area3D" unique_id=1543818303]
+monitoring = false
+script = ExtResource("1_2umt7")
+
+[node name="model" parent="." unique_id=39308545 instance=ExtResource("1_afhwv")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=877529700]
+shape = SubResource("SphereShape3D_cfqcv")

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://7wfqagpfeh4n"]
+
+[ext_resource type="Script" uid="uid://bi43qicx78clf" path="res://scripts/asteroid_emitter.gd" id="1_h8jtt"]
+
+[node name="AsteroidEmitter" type="Node3D" unique_id=661141189]
+script = ExtResource("1_h8jtt")

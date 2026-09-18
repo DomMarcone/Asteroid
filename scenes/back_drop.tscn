@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://csfn0h5037qnj"]
+
+[ext_resource type="Texture2D" uid="uid://bjg5eftam3grb" path="res://assets/backdrop.png" id="1_bxgey"]
+
+[node name="BackDrop" type="Sprite3D" unique_id=710393634]
+texture = ExtResource("1_bxgey")

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b8vti1tuoqd3f"]
+
+[ext_resource type="Script" uid="uid://dejeqfo1aqpu4" path="res://scripts/game_mode_a.gd" id="1_51qqd"]
+[ext_resource type="PackedScene" uid="uid://b3wgmtteduryh" path="res://scenes/shuttle_canon.tscn" id="2_o2cii"]
+[ext_resource type="PackedScene" uid="uid://7wfqagpfeh4n" path="res://scenes/asteroid_emitter.tscn" id="3_8qn34"]
+[ext_resource type="PackedScene" uid="uid://xg83c3dwv6v5" path="res://scenes/earth.tscn" id="4_omb5w"]
+[ext_resource type="PackedScene" uid="uid://djskpqoap4sii" path="res://scenes/hud.tscn" id="5_f6v4u"]
+[ext_resource type="PackedScene" uid="uid://csfn0h5037qnj" path="res://scenes/back_drop.tscn" id="6_gemfp"]
+[ext_resource type="PackedScene" uid="uid://u8pyvag7jcos" path="res://scenes/pause_menu.tscn" id="7_o2cii"]
+[ext_resource type="PackedScene" uid="uid://ba5lkxnclhnh8" path="res://scenes/instructions.tscn" id="8_8qn34"]
+[ext_resource type="PackedScene" uid="uid://bev7wiikal8fo" path="res://scenes/game_camera.tscn" id="9_omb5w"]
+
+[sub_resource type="Environment" id="Environment_xrmt2"]
+background_mode = 1
+
+[node name="GameModeA" type="Node3D" unique_id=936924815]
+script = ExtResource("1_51qqd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1123550131]
+transform = Transform3D(0.59064287, 0, -0.80693305, 0, 1, 0, 0.80693305, 0, 0.59064287, -7, 0, 5)
+light_energy = 2.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=548655999]
+environment = SubResource("Environment_xrmt2")
+
+[node name="ShuttleCanon" parent="." unique_id=820200785 instance=ExtResource("2_o2cii")]
+
+[node name="AsteroidEmitter" parent="." unique_id=661141189 instance=ExtResource("3_8qn34")]
+
+[node name="Earth" parent="." unique_id=592760981 node_paths=PackedStringArray("hud", "camera") instance=ExtResource("4_omb5w")]
+transform = Transform3D(0.9659258, -0.25881904, 0, 0.25881904, 0.9659258, 0, 0, 0, 1, 0, 0, 0)
+hud = NodePath("../HUD")
+camera = NodePath("../GameCamera")
+
+[node name="HUD" parent="." unique_id=1451354552 instance=ExtResource("5_f6v4u")]
+
+[node name="BackDrop" parent="." unique_id=710393634 instance=ExtResource("6_gemfp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+pixel_size = 0.08
+
+[node name="PauseMenu" parent="." unique_id=1090043269 instance=ExtResource("7_o2cii")]
+
+[node name="Instructions" parent="." unique_id=1035633819 instance=ExtResource("8_8qn34")]
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=606196725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="GameCamera" parent="." unique_id=250849054 instance=ExtResource("9_omb5w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)

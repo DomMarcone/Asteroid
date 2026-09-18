@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cf1tcb8a4lid0"]
+
+[ext_resource type="Script" uid="uid://3cygvdnr3xuo" path="res://scripts/start_menu.gd" id="1_m7x51"]
+[ext_resource type="PackedScene" uid="uid://xg83c3dwv6v5" path="res://scenes/earth.tscn" id="1_thu50"]
+[ext_resource type="PackedScene" uid="uid://csfn0h5037qnj" path="res://scenes/back_drop.tscn" id="2_m7x51"]
+
+[node name="StartMenu" type="Node3D" unique_id=997290739]
+script = ExtResource("1_m7x51")
+
+[node name="Earth" parent="." unique_id=1543818303 instance=ExtResource("1_thu50")]
+
+[node name="Control" type="Control" parent="." unique_id=860430218]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label2" type="Label" parent="Control" unique_id=1005982313]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = 49.0
+offset_right = 186.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Any Key To Start"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1650113093]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.0
+offset_top = -150.5
+offset_right = 277.0
+offset_bottom = 150.5
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=5.0 connected=1][font_size=72][center]ASTEROID![/center][/font_size][/wave]"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=553091863]
+transform = Transform3D(0.59064287, 0, -0.80693305, 0, 1, 0, 0.80693305, 0, 0.59064287, -7, 0, 5)
+light_energy = 2.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=702547536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 48)
+fov = 39.6
+
+[node name="BackDrop" parent="." unique_id=710393634 instance=ExtResource("2_m7x51")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+pixel_size = 0.08

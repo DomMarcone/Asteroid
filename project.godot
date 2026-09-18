@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Asteroid"
+config/version="0.1"
+run/main_scene="uid://cf1tcb8a4lid0"
+config/features=PackedStringArray("4.7", "Mobile")
+boot_splash/bg_color=Color(0.0885599, 0.0885599, 0.0885599, 1)
+boot_splash/image="uid://cjmjmey10q6id"
+config/icon="uid://cjmjmey10q6id"
+
+[autoload]
+
+MusicPlayer="*uid://b10kphtadsub4"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[filesystem]
+
+import/blender/enabled=false
+
+[physics]
+
+3d/physics_engine="GodotPhysics3D"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

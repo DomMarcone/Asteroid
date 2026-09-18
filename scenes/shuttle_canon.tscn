@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b3wgmtteduryh"]
+
+[ext_resource type="Script" uid="uid://ukpo6ksanq6j" path="res://scripts/shuttle_canon.gd" id="1_cijky"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88qne"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0.22352941, 0.56078434, 0.28627452, 0.7019608)
+
+[node name="ShuttleCanon" type="Node3D" unique_id=820200785]
+script = ExtResource("1_cijky")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1122401243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1000001, 0)
+material_override = SubResource("StandardMaterial3D_88qne")
+radius = 0.25
+height = 1.0
+sides = 4
+
+[node name="Shuttles" type="Node3D" parent="." unique_id=1395373560]
+top_level = true

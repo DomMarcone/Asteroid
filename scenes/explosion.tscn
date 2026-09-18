@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://3vbmrhaj1pia"]
+
+[ext_resource type="Texture2D" uid="uid://da3wnp6cy3tst" path="res://assets/explosion/0000.png" id="1_dajh7"]
+[ext_resource type="Texture2D" uid="uid://die3ao2yh5612" path="res://assets/explosion/0002.png" id="3_72igq"]
+[ext_resource type="Texture2D" uid="uid://iqqiwe0xh56w" path="res://assets/explosion/0004.png" id="5_otx0i"]
+[ext_resource type="Texture2D" uid="uid://b8aism8cqhq41" path="res://assets/explosion/0006.png" id="7_gg0h4"]
+[ext_resource type="Texture2D" uid="uid://b6ktmgv20mxve" path="res://assets/explosion/0008.png" id="9_adpwe"]
+[ext_resource type="Texture2D" uid="uid://cm2l4uimyby4b" path="res://assets/explosion/0010.png" id="11_e6vhj"]
+[ext_resource type="Texture2D" uid="uid://c5o7wuigyvrof" path="res://assets/explosion/0012.png" id="13_c87jn"]
+[ext_resource type="Texture2D" uid="uid://dvsi0qhe2mha4" path="res://assets/explosion/0014.png" id="15_q358x"]
+[ext_resource type="Texture2D" uid="uid://dwrlcupyt1asq" path="res://assets/explosion/0016.png" id="17_rvru5"]
+[ext_resource type="Texture2D" uid="uid://d3grpqy0ndrcg" path="res://assets/explosion/0018.png" id="19_t4dar"]
+[ext_resource type="Texture2D" uid="uid://bcrkl56hrvxv5" path="res://assets/explosion/0020.png" id="21_gblk8"]
+[ext_resource type="Texture2D" uid="uid://dfjgmqtmustpn" path="res://assets/explosion/0022.png" id="23_177gu"]
+[ext_resource type="Texture2D" uid="uid://ck51inuuvmxh6" path="res://assets/explosion/0024.png" id="25_yrcsj"]
+[ext_resource type="AudioStream" uid="uid://csuk5j41ly7mc" path="res://assets/explosion/explosion-b.wav" id="26_ohq2j"]
+[ext_resource type="Texture2D" uid="uid://dbe0vmkvym7cl" path="res://assets/explosion/0026.png" id="27_vftce"]
+[ext_resource type="Texture2D" uid="uid://ba333a6khmjnb" path="res://assets/explosion/0028.png" id="29_lau2d"]
+[ext_resource type="Texture2D" uid="uid://do7uswguy71hp" path="res://assets/explosion/0030.png" id="31_dqs8g"]
+[ext_resource type="Texture2D" uid="uid://bgqfi081u82nm" path="res://assets/explosion/0032.png" id="33_lbtav"]
+[ext_resource type="Texture2D" uid="uid://x22180kupk5g" path="res://assets/explosion/0034.png" id="35_rxm2l"]
+[ext_resource type="Texture2D" uid="uid://w5b0iuughim8" path="res://assets/explosion/0036.png" id="37_lr757"]
+[ext_resource type="Texture2D" uid="uid://b0hbkfi8tpfvc" path="res://assets/explosion/0038.png" id="39_61nyj"]
+[ext_resource type="Texture2D" uid="uid://ulev61m61avf" path="res://assets/explosion/0040.png" id="41_lurjc"]
+[ext_resource type="Texture2D" uid="uid://bd1lnnnibb4mp" path="res://assets/explosion/0042.png" id="43_pns1q"]
+[ext_resource type="Texture2D" uid="uid://14yx6wdn35ss" path="res://assets/explosion/0044.png" id="45_c2tp4"]
+[ext_resource type="Texture2D" uid="uid://b2y6fq7qduuga" path="res://assets/explosion/0046.png" id="47_1h5l8"]
+[ext_resource type="Script" uid="uid://dw6831a7csj5i" path="res://scripts/explosion.gd" id="48_fv0i0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3oo6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dajh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_72igq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_otx0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gg0h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_adpwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e6vhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c87jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q358x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_rvru5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t4dar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_gblk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_177gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_yrcsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vftce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lau2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dqs8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_lbtav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rxm2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_lr757")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_61nyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_lurjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_pns1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_c2tp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_1h5l8")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="Animation" id="Animation_00uf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [64.0]
+}
+
+[sub_resource type="Animation" id="Animation_ohq2j"]
+resource_name = "explosion_light"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:light_energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [64.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qb5kx"]
+_data = {
+&"RESET": SubResource("Animation_00uf8"),
+&"explosion_light": SubResource("Animation_ohq2j")
+}
+
+[node name="Explosion" type="AnimatedSprite3D" unique_id=1674257096]
+pixel_size = 0.05
+sprite_frames = SubResource("SpriteFrames_3oo6d")
+autoplay = "default"
+frame = 23
+frame_progress = 1.0
+script = ExtResource("48_fv0i0")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=252738504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+light_energy = 64.0
+omni_range = 20.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OmniLight3D" unique_id=1997386198]
+libraries/ = SubResource("AnimationLibrary_qb5kx")
+autoplay = &"explosion_light"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2132780015]
+stream = ExtResource("26_ohq2j")
+volume_db = 9.0
+autoplay = true
+bus = &"Effects"
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
